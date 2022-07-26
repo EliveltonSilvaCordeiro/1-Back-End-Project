@@ -5,9 +5,10 @@ if "__name__" == "__main__":
 def showCousin(limit):
     guidePrime = 1
     order = 0
-    for cousin in range(1, limit, 1):
-        for divisor in range(1, limit, 1):
-            if (float(cousin / divisor) == int(cousin / divisor)):
+
+    for cousin in range(2, limit, 1):
+        for divisor in range(2, limit, 1):
+            if cousin % divisor == 0:
                 if guidePrime == 1:
                     guidePrime = 0
                     if cousin == divisor:
